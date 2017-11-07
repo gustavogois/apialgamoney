@@ -1,0 +1,30 @@
+{
+	"info": {
+		"name": "algamoney",
+		"_postman_id": "366eaa07-441a-0b53-cc35-d4d686d20964",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/categorias",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
