@@ -25,6 +25,55 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "salvar categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"Imposto Exterior\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/categorias",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get categorias by codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/categorias/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias",
+						"10"
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
