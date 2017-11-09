@@ -38,7 +38,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"nome\" : \"Imposto Exterior\"\n}"
+					"raw": "{\n\t\"nome\" : \"Transporte\"\n}"
 				},
 				"url": {
 					"raw": "localhost:8080/categorias",
@@ -61,14 +61,104 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "localhost:8080/categorias/10",
+					"raw": "localhost:8080/categorias/100",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"categorias",
-						"10"
+						"100"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/pessoas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get pessoas by codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/pessoas/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "salvar pessoa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Será deletada\",\n    \"endereco\": {\n        \"logradouro\": \"Praceta das Orquídeas\",\n        \"numero\": \"1\",\n        \"complemento\": \"2D\",\n        \"bairro\": \"Arroja\",\n        \"cep\": \"2675-578\",\n        \"cidade\": \"Lisboa\",\n        \"estado\": \"Lisboa\"\n    },\n    \"ativo\": true\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/pessoas/13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"13"
 					]
 				},
 				"description": ""
