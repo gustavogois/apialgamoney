@@ -164,6 +164,35 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "atualizar pessoas by codigo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"nome\": \"Maria2\",\n        \"endereco\": {\n            \"logradouro\": \"Rua do Abacaxi2\",\n            \"numero\": \"102\",\n            \"complemento\": \"2\",\n            \"bairro\": \"Brasil2\",\n            \"cep\": \"38.400-12\",\n            \"cidade\": \"Uberlândia2\",\n            \"estado\": \"MG2\"\n        },\n        \"ativo\": false\n    }"
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
