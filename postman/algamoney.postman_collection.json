@@ -128,7 +128,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"Será deletada\",\n    \"endereco\": {\n        \"logradouro\": \"Praceta das Orquídeas\",\n        \"numero\": \"1\",\n        \"complemento\": \"2D\",\n        \"bairro\": \"Arroja\",\n        \"cep\": \"2675-578\",\n        \"cidade\": \"Lisboa\",\n        \"estado\": \"Lisboa\"\n    },\n    \"ativo\": true\n}"
+					"raw": "{\n    \"nome\": \"Ativo false\",\n    \"endereco\": {\n        \"logradouro\": \"Praceta das Orquídeas\",\n        \"numero\": \"1\",\n        \"complemento\": \"2D\",\n        \"bairro\": \"Arroja\",\n        \"cep\": \"2675-578\",\n        \"cidade\": \"Lisboa\",\n        \"estado\": \"Lisboa\"\n    },\n    \"ativo\": false\n}"
 				},
 				"url": {
 					"raw": "localhost:8080/pessoas",
@@ -188,6 +188,84 @@
 					"path": [
 						"pessoas",
 						"4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar propriedade ativo de pessoa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "true"
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas/1/ativo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"1",
+						"ativo"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get lancamentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/categorias",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "salvar lancamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"descricao\": \"Meu primeiro lançamento\",\n        \"dataVencimento\": [2017,12,20],\n        \"valor\": 1000,\n        \"tipo\": \"RECEITA\",\n        \"categoria\": {\n            \"codigo\": 1\n        }\n        ,\n        \"pessoa\": {\n            \"codigo\": 1\n            \"ativo\": false\n        }\n    }"
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos"
 					]
 				},
 				"description": ""
