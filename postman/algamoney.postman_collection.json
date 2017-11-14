@@ -231,13 +231,30 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "localhost:8080/categorias",
+					"raw": "localhost:8080/lancamentos?size=2&page=1&descricao=ha",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"categorias"
+						"lancamentos"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "descricao",
+							"value": "ha",
+							"equals": true
+						}
 					]
 				},
 				"description": ""
